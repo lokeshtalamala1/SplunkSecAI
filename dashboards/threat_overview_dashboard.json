@@ -1,0 +1,15 @@
+{
+  "title": "SplunkSec AI – Threat Overview",
+  "visualizations": [
+    {
+      "title": "Anomaly Score Over Time",
+      "search": "index=security_logs | timechart avg(anomaly_score) by user",
+      "type": "line"
+    },
+    {
+      "title": "Top Risky Users",
+      "search": "index=security_logs | stats avg(anomaly_score) by user | sort - avg(anomaly_score)",
+      "type": "bar"
+    }
+  ]
+}

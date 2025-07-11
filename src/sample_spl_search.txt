@@ -1,0 +1,6 @@
+index=security_logs sourcetype=auth_logs
+| stats count by user, src_ip
+| eventstats avg(count) as avg, stdev(count) as stddev
+| eval score=(count-avg)/stddev
+| where score > 2
+| table user, src_ip, count, score

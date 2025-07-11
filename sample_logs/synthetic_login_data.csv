@@ -1,0 +1,7 @@
+user,login_hour,login_day,geo_distance
+alice,13,2,5.2
+bob,23,6,1.1
+charlie,3,0,15.8
+alice,9,1,5.3
+bob,10,5,0.9
+charlie,2,0,16.4
